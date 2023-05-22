@@ -6,7 +6,7 @@ class handler(BaseHTTPRequestHandler):
 
     # method to handle HTTP GET Request 
     def do_GET(self):
-
+        """Respond to a GET request."""
         s = self.path
         url_components = parse.urlsplit(s)
         query_strings_list = parse.parse_qsl(url_components.query)
